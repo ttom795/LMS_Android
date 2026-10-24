@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace "com.tj.legomarvel"
+    compileSdkVersion 34
+    ndkVersion project.hasProperty('ndkVersion') ? project.property('ndkVersion') : null
+    defaultConfig {
+        applicationId "com.tj.legomarvel"
+        minSdkVersion 28
+        targetSdkVersion 34
+        versionCode 17
+        versionName "0.2.6"
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_STL=c++_shared", "-DANDROID_PLATFORM=android-28"
+                abiFilters 'arm64-v8a'
+            }
+        }
+    }
+    buildTypes {
+        // The recompiled game is large; debug builds would be unusably slow.
+        debug {
+            externalNativeBuild { cmake { arguments "-DCMAKE_BUILD_TYPE=Release" } }
+            debuggable true
+            jniDebuggable false
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path 'jni/CMakeLists.txt'
+            version '3.22.1'
+        }
+    }
+    packagingOptions {
+        jniLibs { useLegacyPackaging true }
+    }
+    lint { abortOnError false }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+}

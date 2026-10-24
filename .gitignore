@@ -1,0 +1,25 @@
+# Generated from the game's executable: never commit (see docs/GAME_FILES.md)
+/gen/
+/analysis/
+# Game files
+*.DAT
+*.dat
+*.exe
+*.dll
+*.bik
+*.ico
+# Shader cache and saves copied off a phone
+CachedShaders/
+save/
+# Your own exe and DLLs, if kept next to the repo
+GAME/
+# Build outputs (APKs go on GitHub Releases as assets, not in git)
+*.apk
+/build/
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/local.properties
+tools/__pycache__/
+desktop/build/
