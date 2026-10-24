@@ -143,9 +143,5 @@ These empty files in `Android/data/com.tj.legomarvel/files/save/` change how the
 | `async_shaders.txt` | Draws while shaders compile; objects pop in as they finish. |
 | `gpu_vendor.txt` | `keep`, `intel`, `nvidia` or `amd`. Pretending to be a PC GPU makes the game load its full prebuilt shader set up front, which takes 5 to 10 minutes on a phone. |
 
-
-## Documentation
-- [CHANGELOG.md](CHANGELOG.md) for version history.
-
 ## Legal
 LEGO, Marvel and all related names and assets belong to their respective owners. This project is not affiliated with or endorsed by them. Do not redistribute anything produced from the game or game files. Third-party code keeps its own licenses: SDL2 (zlib) in `android/app/jni/SDL2`, dxvk-native (zlib) in `android/app/jni/dxvk`.
