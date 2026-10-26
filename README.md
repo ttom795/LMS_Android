@@ -6,6 +6,10 @@ This repository contains no game code or data. You need your own copy of the PC 
 
 Discord: http://discord.gg/df3cK2JCqs
 
+Youtube link below:
+
+[![Watch the video](https://img.youtube.com/vi/9xGQhgW3Hn0/hqdefault.jpg)](https://youtu.be/9xGQhgW3Hn0)
+
 ## Functionality
 - **Static recompilation.** This project is *not* a decompilation but a recompilation; Basically, it's just converting one type of code to another rather than re-creating the original source. The game's own shader compiler (`D3DCompiler_43.dll`) is recompiled too, so shaders are built on the phone.
 - **Graphics:** a patched [dxvk-native](https://github.com/Joshua-Ashton/dxvk-native) (native-1.9.2b) translates D3D9 to Vulkan 1.1. You must meet this requirement for the game to even launch, but most devices support it nowadays.
